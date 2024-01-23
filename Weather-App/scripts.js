@@ -318,32 +318,6 @@ function displayCurrentWeather(weather, place_name) {
     currentWeatherIcon.innerHTML = `<img src="images/001-meteorology.png" alt="Current Weather Icon">`;
   }
 
-  // Memes
-  const memeBoxElement = document.getElementById('meme-box');
-  if (Math.round(weather.main.temp) <= -10) {
-    memeBoxElement.innerHTML = `<img src="images/memes/Jack-Nicholson-The-Shining-Snow.jpg" alt="Meme">`;
-  } else if (Math.round(weather.main.temp) >= 20 && weather.main.temp <= 25) {
-    memeBoxElement.innerHTML = `<img src="images/memes/0_ZjYSm_q36J4KChdn.jpg" alt="Meme">`;
-  } else if (Math.round(weather.main.temp) > 25 && weather.main.temp <= 30) {
-    memeBoxElement.innerHTML = `<img src="images/memes/5d018c085cf9819634dee6572fb5dd79.jpg" alt="Meme">`;
-  } else if (Math.round(weather.main.temp) > 30) { 
-    memeBoxElement.innerHTML = `<img src="images/memes/Heat_wave.jpg" alt="Meme">`;
-  } else if (Math.round(weather.main.temp) >= -9 && weather.main.temp < 19) {
-    if (weather.weather[0].main === 'Rain' || weather.weather[0].main === 'Drizzle' || weather.weather[0].main === 'Thunderstorm') {
-      memeBoxElement.innerHTML = `<img src="images/memes/8d37f35ff717b6691ab1acf90dce6c83.jpg" alt="Meme">`;
-    } else if (weather.weather[0].main === 'Snow') {
-      memeBoxElement.innerHTML = `<img src="images/memes/Snowing.jpg" alt="Meme">`;
-    } else if (weather.weather[0].main === 'Clouds') {
-      memeBoxElement.innerHTML = `<img src="images/memes/Clouds.jpg" alt="Meme">`; 
-    } else if (weatherIconID === '50d') {
-      memeBoxElement.innerHTML = `<img src="images/memes/Mist.jpg" alt="Meme">`;
-    } else { // Clear weather
-      memeBoxElement.innerHTML = `<img src="images/memes/bbd.gif" alt="Meme">`;
-    }
-  } else {
-    memeBoxElement.innerHTML = `<img src="images/memes/bbd.gif" alt="Meme">`; 
-  }
-
   // Display the popup if it hasn't been closed
   if (localStorage.getItem('popupClosed') === 'true') {
   } else {
