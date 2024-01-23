@@ -1,11 +1,6 @@
 function loadCSSBasedOnUserAgent() {
   const userAgent = navigator.userAgent.toLowerCase();
-
-  if (userAgent.includes('android') || userAgent.includes('iphone') || userAgent.includes('ipad')) {
-    document.getElementById('CSS-source').href = 'mobile.css'; // Load mobile.css for mobile devices
-  } else {
-    document.getElementById('CSS-source').href = 'styles.css'; // Load default.css for other devices
-  }
+    document.getElementById('CSS-source').href = 'styles.css';
 }
 
 loadCSSBasedOnUserAgent();
@@ -13,8 +8,6 @@ loadCSSBasedOnUserAgent();
 const apiKey = '49b0abfbcd72adcfc70fc7f555198b19';
 const mapboxToken = 'pk.eyJ1IjoiczI3Mjg4IiwiYSI6ImNscnA4OW14cDAyZXAyam96Z25rZHdpd3QifQ.8r4lC0ndDr_xmmGzsWKjaQ';
 
-// const apiKey = process.env.REACT_APP_OPENWEATHERMAPAPI;
-// const mapboxToken = process.env.REACT_APP_MAPBOXTOKEN;
 
 localStorage.setItem('popupClosed', false);
 
@@ -241,8 +234,6 @@ function displayCurrentWeather(weather, place_name) {
   const currentWeatherTitle = document.getElementById('current-weather-title');
   currentWeatherTitle.innerHTML = `<h2>Current Weather in ${place_name}</h2>`;
 
-  const sunrise = new Date(weather.sys.sunrise * 1000 + weather.timezone * 1000 - 3600 * 1000).toLocaleTimeString();
-  const sunset = new Date(weather.sys.sunset * 1000 + weather.timezone * 1000 - 3600 * 1000).toLocaleTimeString();
 
   const currentWeatherElement = document.getElementById('current-weather');
   currentWeatherElement.innerHTML = `
@@ -253,8 +244,6 @@ function displayCurrentWeather(weather, place_name) {
     <p class="current-weather-pressure">Pressure: ${Math.round(weather.main.pressure)}hPa</p>
     <p class="current-weather-visibility">Visibility: ${Math.round(weather.visibility / 1000 * 10) / 10}km</p>
     <p class="current-weather-wind">Wind Speed: ${Math.round(weather.wind.speed * 10) / 10}m/s</p>
-    <p class="current-weather-sunrise">Sunrise: ${sunrise}</p>
-    <p class="current-weather-"sunset>Sunset: ${sunset}</p>
   `;
 
   const currentWeatherIcon = document.getElementById('current-weather-icon');
@@ -512,7 +501,6 @@ mapTemperature.addEventListener('click', () => {
   const mapBoxWind = document.getElementById('map-box-wind');
   mapBoxWind.style.display = 'none';
   getTA2MapData(latitude, longitude);
-  window.scrollTo(0, document.body.scrollHeight);
 });
 
 const mapPrecipitation = document.getElementById('map-precipitation');
@@ -526,7 +514,6 @@ mapPrecipitation.addEventListener('click', () => {
   const mapBoxWind = document.getElementById('map-box-wind');
   mapBoxWind.style.display = 'none';
   getPR0MapData(latitude, longitude);
-  window.scrollTo(0, document.body.scrollHeight);
 });
 
 const mapWind = document.getElementById('map-wind');
@@ -540,7 +527,6 @@ mapWind.addEventListener('click', () => {
   const mapBoxWind = document.getElementById('map-box-wind');
   mapBoxWind.style.display = 'block';
   getWNDMapData(latitude, longitude);
-  window.scrollTo(0, document.body.scrollHeight);
 });
 
 // Handle Enter key press in input field

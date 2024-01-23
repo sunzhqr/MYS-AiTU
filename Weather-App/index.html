@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Weather Definer 3000</title>
-  <link rel="icon" href="images/001-meteorology.png" type="image/x-icon">
+  <link rel="icon" href="images/sunshine.png" type="image/x-icon">
   <link rel="stylesheet" href="styles.css" id="CSS-source">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="crossorigin=""/>
@@ -12,20 +12,16 @@
 <body>
     <div id="header-container">
       <div id="weather-app-icon">
-        <img src="images/001-meteorology.png" alt="Weather App Icon">
+        <img src="images/weather-forecast.png" alt="Weather App Icon">
       </div>
       <div id="weather-app-title">
         <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Weather Definer 3000</h1>
-      </div>
-      <div class="mode-switch">
-        <input type="range" min="1" max="3" value="2" class="slider" id="modeSlider">
-        <p>Type: <span id="modeText">Default</span></p>
       </div>
     </div>
     
     <div id="search-container">
       <div id="location-input-div">
-        <input type="text" id="location-input-field" placeholder="Enter city...">
+        <input type="text" id="location-input-field" placeholder="Enter city name...">
       </div>
       <div id="search-button-div">
         <button id="search-button">Search</button>
@@ -34,48 +30,64 @@
     
     <div id="suggestions-list" style="display: none;"></div>
 
-    <div id="current-weather-container" style="display: none;">
-      <div id="current-weather-title"></div>
-      <div id="current-weather-box">
-        <div id="current-weather"></div>
-        <div id="current-weather-icon"></div>
+    <div id="weather-map-container" style="display: flex;">
+
+      <div id="current-weather-container" style=" display: none;">
+          <div id="current-weather-title">
+            <img src="images/kz.png" style="z-index: 99999;"> 
+          </div>
+          <div id="current-weather-box">
+              <div id="current-weather"></div>
+              <div id="current-weather-icon"></div>
+          </div>
       </div>
+  
+      <div id="map-container" style="display: none;">
+          <div id="map-title">
+              <h2>Map</h2>
+          </div>
+          <div id="map-precipitation">
+              <p>Precipitation</p>
+          </div>
+          <div id ="map-temperature">
+              <p>Temperature</p>
+          </div>
+          <div id="map-wind">
+              <p>Wind</p>
+          </div>
+          <div class="map-box" id="map-box-temperature" style="display: none;"></div>
+          <div class="map-box" id="map-box-precipitation" style="display: none;"></div>
+          <div class="map-box" id="map-box-wind" style="display: none;"></div>
+      </div>
+  
+  </div>
+  <div id="forecast-container" style="display: flex;">
+
+    <div id="forecast-daily-container" style="flex: 1; margin-right: 10px; display: none;">
+        <div id="forecast-daily-title">
+            <h2 id="forecast-daily-title-h2">Daily Forecast</h2>
+        </div>
+        <div id="forecast-daily-box"></div>
     </div>
-    <div id="map-container" style="display: none;">
-      <div id="map-title">
-        <h2>Map</h2>
-      </div>
-      <div id ="map-temperature">
-        <p>Temperature</p>
-      </div>
-      <div id="map-precipitation">
-        <p>Precipitation</p>
-      </div>
-      <div id="map-wind">
-        <p>Wind</p>
-      </div>
-      <div class="map-box" id="map-box-temperature" style="display: none;"></div>
-      <div class="map-box" id="map-box-precipitation" style="display: none;"></div>
-      <div class="map-box" id="map-box-wind" style="display: none;"></div>
+
+    <div id="forecast-hourly-container" style="flex: 1; margin-left: 10px; display: none;">
+        <div id="forecast-hourly-title">
+            <h2 id="forecast-hourly-title-h2">Hourly Forecast</h2>
+        </div>
+        <div id="forecast-hourly-box"></div>
     </div>
-    <div id="forecast-hourly-container" style="display: none;">
-      <div id="forecast-hourly-title">
-        <h2 id="forecast-hourly-title-h2">Hourly Forecast</h2>
-      </div>
-      <div id="forecast-hourly-box"></div>
-    </div>
-    <div id="forecast-daily-container" style="display: none;">
-      <div id="forecast-daily-title">
-        <h2 id="forecast-daily-title-h2">Daily Forecast</h2>
-      </div>
-      <div id="forecast-daily-box"></div>
-    </div>
+</div>
+
     <div id="footer-container">
       <div id="footer-text">
-        <h3 id="footer-author">Yeltore Sanzhar Magzhan edition</h3>
+        <h3 id="footer-author">Yeltore Sanzhar Magzhan production SE-2212</h3>
         <p>Weather data provided by <a href="https://openweathermap.org/" target="_blank">OpenWeather</a></p>
         <p>Map data © <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a></p>
         <p>Geocoding © <a href="https://www.mapbox.com/" target="_blank">Mapbox</a></p>
+        <p>Type: <span id="modeText">Default</span></p>
+        <div style="display: flex; justify-content: center;">
+          <input type="range" min="1" max="3" value="2" class="slider" id="modeSlider">
+      </div>
       </div>
     </div>
   </div>

@@ -1,28 +1,4 @@
-:root {
-  --default-background-color: #edb5d6;
-  --default-background-color-body: #e2e2e2;
-  --default-text-color: #333;
-  --default-text-p-color: #666;
-  --default-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  --default-hover-color: #a3a3a3;
-  --default-border-color: #000;
-  --light-background-color: #fff;
-  --light-text-color: #333;
-  --light-text-p-color: #666;
-  --light-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  --light-hover-color: #b4b4b4;
-  --light-border-color: #000;
-  --dark-background-color: #333;
-  --dark-text-color: #fff;
-  --dark-text-p-color: #b4b4b4;
-  --dark-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-  --dark-hover-color: #5f5f5f;
-  --dark-border-color: #fff;
-}
-
-/* Styles for desktop and larger screens */
 @media only screen and (min-width: 850px) {
-  /* Adjustments for larger screens */
 
   .default-mode {
     /* Default mode styles */
@@ -93,7 +69,7 @@
     grid-column: 1 / span 2;
     grid-row: 1;
     display: grid;
-    grid-template-columns: 130px 1fr 120px;
+    grid-template-columns: 130px 1fr;
     grid-template-rows: auto;
     justify-content: center;
   }
@@ -105,7 +81,7 @@
     grid-column: 1 / span 2;
     grid-row: 1;
     display: grid;
-    grid-template-columns: 130px 1fr 120px;
+    grid-template-columns: 130px 1fr;
     grid-template-rows: auto;
     justify-content: center;
   }
@@ -117,7 +93,7 @@
     grid-column: 1 / span 2;
     grid-row: 1;
     display: grid;
-    grid-template-columns: 130px 1fr 120px;
+    grid-template-columns: 130px 1fr;
     grid-template-rows: auto;
     justify-content: center;
   }
@@ -194,7 +170,7 @@
     border-radius: 8px;
     height: 100px;
     padding: 10px;
-    grid-column: 2;
+    grid-column: 2/ span 1;
     grid-row: 1;
   }
   .default-mode #weather-app-title h1 {
@@ -212,7 +188,7 @@
     border-radius: 8px;
     height: 100px;
     padding: 10px;
-    grid-column: 2;
+    grid-column: 2/ span 1;
     grid-row: 1;
   }
   .light-mode #weather-app-title h1 {
@@ -230,65 +206,13 @@
     border-radius: 8px;
     height: 100px;
     padding: 10px;
-    grid-column: 2;
+    grid-column: 2/ span 1;
     grid-row: 1;
   }
   .dark-mode #weather-app-title h1 {
     font-size: 35px;
     text-align: center;
     padding: 5px;
-  }
-
-  .default-mode .mode-switch {
-    background-color: var(--default-background-color);
-    float: right;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow:var(--default-box-shadow);
-    color: var(--default-text-color);    
-    width: 100px;
-    height: 100px;
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    grid-column: 3;
-    grid-row: 1;
-  }
-  .light-mode .mode-switch {
-    background-color: var(--light-background-color);
-    float: right;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow:var(--light-box-shadow);
-    color: var(--light-text-color);    
-    width: 100px;
-    height: 100px;
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    grid-column: 3;
-    grid-row: 1;
-  }
-  .dark-mode .mode-switch {
-    background-color: var(--dark-background-color);
-    float: right;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow:var(--dark-box-shadow);
-    color: var(--dark-text-color);    
-    width: 100px;
-    height: 100px;
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    grid-column: 3;
-    grid-row: 1;
   }
 
   .mode-switch .slider {
@@ -489,7 +413,7 @@
   }
 
   .default-mode #current-weather-container {
-    width: calc(100% - 20px);
+    width: calc(50% - 20px);
     margin-top: 0px;
     margin-bottom: 5px;
     margin-left: 10px;
@@ -498,11 +422,11 @@
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     gap: 5px 5px;
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 1;
     grid-row: 4;
   }
   .light-mode #current-weather-container {
-    width: calc(100% - 20px);
+    width: calc(50% - 20px);
     margin-top: 0px;
     margin-bottom: 5px;
     margin-left: 10px;
@@ -511,11 +435,11 @@
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     gap: 5px 5px;
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 1;
     grid-row: 4;
   }
   .dark-mode #current-weather-container {
-    width: calc(100% - 20px);
+    width: calc(50% - 20px);
     margin-top: 0px;
     margin-bottom: 5px;
     margin-left: 10px;
@@ -524,7 +448,7 @@
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     gap: 5px 5px;
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 1;
     grid-row: 4;
   }
 
@@ -682,14 +606,7 @@
     grid-column: 2;
     grid-row: 4;
   }
-  .default-mode #current-weather .current-weather-sunrise {
-    grid-column: 1;
-    grid-row: 5;
-  }
-  .default-mode #current-weather .current-weather-sunset {
-    grid-column: 2;
-    grid-row: 5;
-  }
+
 
   .light-mode #current-weather {
     background-color:var(--light-background-color);
@@ -2003,5 +1920,24 @@
     display: block;
   }
 }
-
-
+:root {
+  --default-background-color: #cdf299;
+  --default-background-color-body: #e2e2e2;
+  --default-text-color: #333;
+  --default-text-p-color: #666;
+  --default-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  --default-hover-color: #a3a3a3;
+  --default-border-color: #000;
+  --light-background-color: #fff;
+  --light-text-color: #333;
+  --light-text-p-color: #666;
+  --light-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  --light-hover-color: #b4b4b4;
+  --light-border-color: #000;
+  --dark-background-color: #333;
+  --dark-text-color: #fff;
+  --dark-text-p-color: #b4b4b4;
+  --dark-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  --dark-hover-color: #5f5f5f;
+  --dark-border-color: #fff;
+}
