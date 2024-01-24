@@ -34,9 +34,9 @@ app.get("/", (req, res) => {
 });
 
 // Define the endpoint to serve the image
-app.get("/image", (req, res) => {
+app.get("/image/:image", (req, res) => {
   // Specify the relative path to the image file
-  const imagePath = "/yeltoreplussanzhar/6c5840e8ad28f4e4612dd279cc7e536c.jpg";
+  const imagePath = `/yeltoreplussanzhar/${req.params.image}`;
 
   // Use the path module to join the directory of the current module with the relative path
   const absolutePath = path.join(__dirname, imagePath);
