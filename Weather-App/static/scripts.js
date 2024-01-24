@@ -1,6 +1,6 @@
 function loadCSSBasedOnUserAgent() {
   const userAgent = navigator.userAgent.toLowerCase();
-  document.getElementById("CSS-source").href = "styles.css";
+  document.getElementById("CSS-source").href = "/static/styles.css";
 }
 
 loadCSSBasedOnUserAgent();
@@ -323,109 +323,109 @@ async function displayCurrentWeather(weather, place_name) {
   const weatherIconID = weather.weather[0].icon;
 
   if (weatherIconID === "01d") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/01d.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/01d.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#f5e7b9"
     );
   } else if (weatherIconID === "01n") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/01n.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/01n.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#7791c2"
     );
   } else if (weatherIconID === "02d") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/02d.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/02d.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#a7d6df"
     );
   } else if (weatherIconID === "02n") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/02n.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/02n.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#90a5cc"
     );
   } else if (weatherIconID === "03d") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/03d.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/03d.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#cccccc"
     );
   } else if (weatherIconID === "03n") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/03n.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/03n.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#cccccc"
     );
   } else if (weatherIconID === "04d") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/04d.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/04d.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#a3a2a2"
     );
   } else if (weatherIconID === "04n") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/04n.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/04n.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#a3a2a2"
     );
   } else if (weatherIconID === "09d") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/09d.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/09d.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#9bc7d4"
     );
   } else if (weatherIconID === "09n") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/09n.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/09n.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#9bc7d4"
     );
   } else if (weatherIconID === "10d") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/10d.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/10d.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#72afc2"
     );
   } else if (weatherIconID === "10n") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/10n.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/10n.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#72afc2"
     );
   } else if (weatherIconID === "11d") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/11d.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/11d.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#787b9b"
     );
   } else if (weatherIconID === "11n") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/11n.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/11n.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#787b9b"
     );
   } else if (weatherIconID === "13d") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/13d.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/13d.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#c0fdff"
     );
   } else if (weatherIconID === "13n") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/13n.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/13n.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#c0fdff"
     );
   } else if (weatherIconID === "50d") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/50d.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/50d.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#f4ffff"
     );
   } else if (weatherIconID === "50n") {
-    currentWeatherIcon.innerHTML = `<img src="images/icons/50n.png" alt="Current Weather Icon">`;
+    currentWeatherIcon.innerHTML = `<img src="static/images/icons/50n.png" alt="Current Weather Icon">`;
     document.documentElement.style.setProperty(
       "--default-background-color-body",
       "#f4ffff"
@@ -467,7 +467,7 @@ function displayForecastHourlyData(forecastHourly, weather) {
     const feelsLike = Math.round(hour.main.feels_like);
     const humidity = Math.round(hour.main.humidity);
     const description = capitalizeFirstLetter(weather.description);
-    const iconUrl = `images/icons/${weather.icon}.png`;
+    const iconUrl = `static/images/icons/${weather.icon}.png`;
 
     const forecastItem = `
       <div class="forecast-hourly-item">
@@ -503,7 +503,7 @@ function displayForecastDailyData(forecastDaily, weather) {
     const pressure = Math.round(day.pressure);
     const speed = Math.round(day.speed * 10) / 10;
     const description = capitalizeFirstLetter(weather.description);
-    const iconUrl = `images/icons/${weather.icon}.png`;
+    const iconUrl = `static/images/icons/${weather.icon}.png`;
 
     const forecastItem = `
       <div class="forecast-daily-item">
